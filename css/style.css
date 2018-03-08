@@ -37,6 +37,10 @@ vw: 80vw ----------> x * 1% of viewport width -----------------> 80 * 1% = 80% o
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px; /* it's easier to calculate relative sizes using 10 as a reference */
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
