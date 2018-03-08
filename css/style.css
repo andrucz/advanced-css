@@ -19,6 +19,18 @@ Dark green: #28b485
 - But, rely on order when using 3rd-party stylesheets - always put your author stylesheet last.
 */
 
+/*
+How units are converted from relative to absolute (px)
+
+% (fonts): 150% ---> x% * parent's computed size --------------> 16px * 150% = 24px
+% (lengths): 10% --> x% * parent's computed width -------------> 1000px * 10% = 100px
+em (fonts): 3em ---> x * parent's computed font-size ----------> 16px * 3 = 48px
+em (lengths): 2m --> x * current element computed font-size ---> 24px * 2 = 48px
+rem: 10rem --------> x * root computed font-size --------------> 16px * 10 = 160px
+vh: 90vh ----------> x * 1% of viewport height ----------------> 90 * 1% = 90% of current viewport height
+vw: 80vw ----------> x * 1% of viewport width -----------------> 80 * 1% = 80% of current viewport width
+*/
+
 * {
   margin: 0;
   padding: 0;
