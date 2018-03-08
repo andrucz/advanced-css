@@ -55,6 +55,9 @@ body {
 .heading-primary{
   color: #fff;
   text-transform: uppercase;
+
+  /* prevents the element from being shaken after animations */
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
