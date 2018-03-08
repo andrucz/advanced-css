@@ -37,6 +37,10 @@ The box model
 Heights and widths:
 total width = right border + right padding + specified width + left padding + left border
 total height = top border + top padding + specified height + bottom padding + bottom border
+
+box-sizing: border-box
+total width: specified width
+total height: specified height
 */
 
 *,
