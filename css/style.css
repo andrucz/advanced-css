@@ -31,6 +31,14 @@ vh: 90vh ----------> x * 1% of viewport height ----------------> 90 * 1% = 90% o
 vw: 80vw ----------> x * 1% of viewport width -----------------> 80 * 1% = 80% of current viewport width
 */
 
+/*
+The box model
+
+Heights and widths:
+total width = right border + right padding + specified width + left padding + left border
+total height = top border + top padding + specified height + bottom padding + bottom border
+*/
+
 *,
 *::after,
 *::before {
