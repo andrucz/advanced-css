@@ -41,6 +41,25 @@ total height = top border + top padding + specified height + bottom padding + bo
 box-sizing: border-box
 total width: specified width
 total height: specified height
+###
+
+Box types:
+# display: block
+element formatted visually as a block
+100% of parent's width
+vertically, one after another
+box-model applies (considers height and width)
+
+# display: inline
+content is distributed in lines
+occupies only content's space
+no line-breaks
+/!\ no heights and widths
+/!\ paddings and margins only horizontal (left and right)
+
+# display: inline-block
+a mix of block and inline
+box-model applies (considers height and width)
 */
 
 *,
