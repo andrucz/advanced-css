@@ -38,7 +38,7 @@ vw: 80vw ----------> x * 1% of viewport width -----------------> 80 * 1% = 80% o
 }
 
 html {
-  font-size: 10px; /* it's easier to calculate relative sizes using 10 as a reference */
+  font-size: 62.5%; /* it's easier to calculate relative sizes using 10 as a reference (16px default size * 62.5%) */
 }
 
 body {
