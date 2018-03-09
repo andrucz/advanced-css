@@ -32,9 +32,9 @@ vw: 80vw ----------> x * 1% of viewport width -----------------> 80 * 1% = 80% o
 */
 
 /*
-The box model
+THE BOX MODEL
 
-Heights and widths:
+HEIGHTS AND WIDTHS:
 total width = right border + right padding + specified width + left padding + left border
 total height = top border + top padding + specified height + bottom padding + bottom border
 
@@ -43,23 +43,41 @@ total width: specified width
 total height: specified height
 ###
 
-Box types:
+BOX TYPES:
 # display: block
-element formatted visually as a block
+Element formatted visually as a block
 100% of parent's width
-vertically, one after another
+Vertically, one after another
 box-model applies (considers height and width)
 
 # display: inline
-content is distributed in lines
-occupies only content's space
-no line-breaks
-/!\ no heights and widths
-/!\ paddings and margins only horizontal (left and right)
+Content is distributed in lines
+Occupies only content's space
+No line-breaks
+/!\ No heights and widths
+/!\ Paddings and margins only horizontal (left and right)
 
 # display: inline-block
-a mix of block and inline
+A mix of block and inline
 box-model applies (considers height and width)
+###
+
+POSITIONING SCHEMES
+# Normal flow
+Default positioning scheme
+NOT floated
+NOT absolutely positioned
+Elements laid out according to their source order
+
+# Floats
+Element is removed from the normal flow
+Text and inline elements will wrap around the floated element
+The container will not adjust its height to the element
+
+# Absolute positioning
+Element is removed from the normal flow
+No impact on surrounding content or elements
+We use top, bottom, left and right to offset the element from its relatively positioned container
 */
 
 *,
