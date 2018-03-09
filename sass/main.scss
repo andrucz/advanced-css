@@ -1,84 +1,6 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
-/*
-- CSS declarations marked with !important have the highest priority;
-- But, only use !important as a last resource. It's better to use the correct specifities - more maintainable code!
-
-- Inline styles will always have priority over styles in external stylesheets;
-- A selector that contains 1 ID is more specific than one with 1000 classes;
-
-- The universal selector * has no specificity value (0, 0, 0, 0);
-- Rely more on specificity than on the order of selectors;
-- But, rely on order when using 3rd-party stylesheets - always put your author stylesheet last.
-*/
-
-/*
-How units are converted from relative to absolute (px)
-
-% (fonts): 150% ---> x% * parent's computed size --------------> 16px * 150% = 24px
-% (lengths): 10% --> x% * parent's computed width -------------> 1000px * 10% = 100px
-em (fonts): 3em ---> x * parent's computed font-size ----------> 16px * 3 = 48px
-em (lengths): 2m --> x * current element computed font-size ---> 24px * 2 = 48px
-rem: 10rem --------> x * root computed font-size --------------> 16px * 10 = 160px
-vh: 90vh ----------> x * 1% of viewport height ----------------> 90 * 1% = 90% of current viewport height
-vw: 80vw ----------> x * 1% of viewport width -----------------> 80 * 1% = 80% of current viewport width
-*/
-
-/*
-THE BOX MODEL
-
-HEIGHTS AND WIDTHS:
-total width = right border + right padding + specified width + left padding + left border
-total height = top border + top padding + specified height + bottom padding + bottom border
-
-box-sizing: border-box
-total width: specified width
-total height: specified height
-###
-
-BOX TYPES:
-# display: block
-Element formatted visually as a block
-100% of parent's width
-Vertically, one after another
-box-model applies (considers height and width)
-
-# display: inline
-Content is distributed in lines
-Occupies only content's space
-No line-breaks
-/!\ No heights and widths
-/!\ Paddings and margins only horizontal (left and right)
-
-# display: inline-block
-A mix of block and inline
-box-model applies (considers height and width)
-###
-
-POSITIONING SCHEMES
-# Normal flow
-Default positioning scheme
-NOT floated
-NOT absolutely positioned
-Elements laid out according to their source order
-
-# Floats
-Element is removed from the normal flow
-Text and inline elements will wrap around the floated element
-The container will not adjust its height to the element
-
-# Absolute positioning
-Element is removed from the normal flow
-No impact on surrounding content or elements
-We use top, bottom, left and right to offset the element from its relatively positioned container
-*/
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
 *,
 *::after,
@@ -105,8 +27,8 @@ body {
   height: 95vh; /* 95% of viewport height */
   background-image: linear-gradient(
     to right bottom, 
-    #7ed56fcc, 
-    #28b485cc), 
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
@@ -267,3 +189,77 @@ body {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; /* ensures that other animation values are applied before starting this one */
 }
+
+
+/*
+- CSS declarations marked with !important have the highest priority;
+- But, only use !important as a last resource. It's better to use the correct specifities - more maintainable code!
+
+- Inline styles will always have priority over styles in external stylesheets;
+- A selector that contains 1 ID is more specific than one with 1000 classes;
+
+- The universal selector * has no specificity value (0, 0, 0, 0);
+- Rely more on specificity than on the order of selectors;
+- But, rely on order when using 3rd-party stylesheets - always put your author stylesheet last.
+*/
+
+/*
+How units are converted from relative to absolute (px)
+
+% (fonts): 150% ---> x% * parent's computed size --------------> 16px * 150% = 24px
+% (lengths): 10% --> x% * parent's computed width -------------> 1000px * 10% = 100px
+em (fonts): 3em ---> x * parent's computed font-size ----------> 16px * 3 = 48px
+em (lengths): 2m --> x * current element computed font-size ---> 24px * 2 = 48px
+rem: 10rem --------> x * root computed font-size --------------> 16px * 10 = 160px
+vh: 90vh ----------> x * 1% of viewport height ----------------> 90 * 1% = 90% of current viewport height
+vw: 80vw ----------> x * 1% of viewport width -----------------> 80 * 1% = 80% of current viewport width
+*/
+
+/*
+THE BOX MODEL
+
+HEIGHTS AND WIDTHS:
+total width = right border + right padding + specified width + left padding + left border
+total height = top border + top padding + specified height + bottom padding + bottom border
+
+box-sizing: border-box
+total width: specified width
+total height: specified height
+###
+
+BOX TYPES:
+# display: block
+Element formatted visually as a block
+100% of parent's width
+Vertically, one after another
+box-model applies (considers height and width)
+
+# display: inline
+Content is distributed in lines
+Occupies only content's space
+No line-breaks
+/!\ No heights and widths
+/!\ Paddings and margins only horizontal (left and right)
+
+# display: inline-block
+A mix of block and inline
+box-model applies (considers height and width)
+###
+
+POSITIONING SCHEMES
+# Normal flow
+Default positioning scheme
+NOT floated
+NOT absolutely positioned
+Elements laid out according to their source order
+
+# Floats
+Element is removed from the normal flow
+Text and inline elements will wrap around the floated element
+The container will not adjust its height to the element
+
+# Absolute positioning
+Element is removed from the normal flow
+No impact on surrounding content or elements
+We use top, bottom, left and right to offset the element from its relatively positioned container
+*/
