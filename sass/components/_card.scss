@@ -150,11 +150,8 @@
 
   // BACK SIDE
   &__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include absoluteCenter;
     width: 90%;
-    transform: translate(-50%, -50%);
     text-align: center;
   }
 
